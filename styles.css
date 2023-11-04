@@ -1,0 +1,154 @@
+@font-face {
+    font-family: "banner-font";
+    src: url(assets/Norse-Bold.otf);
+}
+
+:root {
+    --green-accent-color: #596D48;
+    --gray-input-border-color: #E5E7EB;
+}
+
+
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.layout-container {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(237, 245, 237, 0.571);
+    overflow: hidden;
+}
+
+.image-container {
+    position: relative;
+    flex: 35%;
+    height: 100vh;
+    background-image: url(assets/halie-west-25xggax4bSA-unsplash.jpg);
+    background-size: cover;
+}
+
+.main {
+    flex: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    & > * {
+        padding: 20px;
+    }
+}
+
+.banner {
+    position: absolute;
+    top: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    width: 100%;
+    height: 15%;
+    padding: 20px 0;
+
+    & h1 {
+        align-self: center;
+        font-size: 4rem;
+        font-family: "banner-font", Arial, Helvetica, sans-serif;
+    }
+}
+
+.photo-credits {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 5px;
+
+    & a {
+        color: white;
+    }
+}
+
+.first-section h2 {
+    font-size: 1rem;
+    max-width: 60ch;
+
+}
+
+
+.form-section {
+    background-color: white;
+    box-shadow: 0 1px 10px lightgray;
+    display: table;
+    width: 100%;
+}
+
+form {
+    display: table;
+    width: min(100%, 500px);
+
+    & h3 {
+        margin-top: 0;
+    }
+
+    & .form-row {
+        display: table-row;
+    }
+
+    & .form-cell {
+        display: table-cell;
+        padding: .5rem 0;
+    }
+
+    & label {
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+
+    & input {
+        border: 1.5px solid var(--gray-input-border-color);
+        border-radius: 3px;
+        display: block;
+    }
+
+    & input:focus {
+        border-color: rgb(84, 84, 238);
+        outline: none;
+    }
+}
+
+
+.create-acc-btn {
+    background-color: var(--green-accent-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 25px;
+    color: white;
+    font-weight: 600;
+}
+
+.create-acc-btn:hover {
+    cursor: pointer;
+}
+
+.last-section {
+    & a {
+        color: var(--green-accent-color);
+    }
+
+    & a:link {
+        text-decoration: none;
+    }
+
+    & a:hover {
+        text-decoration: underline;
+    }
+}
+
